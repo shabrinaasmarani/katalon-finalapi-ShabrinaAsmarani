@@ -1,0 +1,42 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+api-chain,,,,22-09-2024 18:00:51,22-09-2024 18:00:57,6.427s,PASSED
+,,,,,,,
+Test Cases/testCreateToken,,,,22-09-2024 18:00:51,22-09-2024 18:00:55,4.059s,PASSED
+"post = sendRequest(findTestObject(""CreateToken""))",,,,22-09-2024 18:00:51,22-09-2024 18:00:55,3.580s,PASSED
+"verifyResponseStatusCode(post, 200)",,,,22-09-2024 18:00:55,22-09-2024 18:00:55,0.066s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,22-09-2024 18:00:55,22-09-2024 18:00:55,0.030s,PASSED
+result = slurper.parseText(post.getResponseBodyContent()),,,,22-09-2024 18:00:55,22-09-2024 18:00:55,0.041s,PASSED
+token = token,,,,22-09-2024 18:00:55,22-09-2024 18:00:55,0.021s,PASSED
+assert token != null,,,,22-09-2024 18:00:55,22-09-2024 18:00:55,0.006s,PASSED
+assert token instanceof java.lang.String,,,,22-09-2024 18:00:55,22-09-2024 18:00:55,0.008s,PASSED
+println(post),,,,22-09-2024 18:00:55,22-09-2024 18:00:55,0.007s,PASSED
+,,,,,,,
+Test Cases/testGetBooking,,,,22-09-2024 18:00:55,22-09-2024 18:00:57,1.377s,PASSED
+"get = sendRequest(findTestObject(""GetBooking"", [""bookingid"":2]))",,,,22-09-2024 18:00:55,22-09-2024 18:00:57,1.194s,PASSED
+"verifyResponseStatusCode(get, 200)",,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.004s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.001s,PASSED
+result = slurper.parseText(get.getResponseBodyContent()),,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.010s,PASSED
+bookingid = bookingid,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.012s,PASSED
+assert bookingid != null,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.004s,PASSED
+assert bookingid instanceof java.lang.Integer,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.000s,PASSED
+println(get),,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.000s,PASSED
+,,,,,,,
+Test Cases/testCreateToken,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.351s,PASSED
+"post = sendRequest(findTestObject(""CreateToken""))",,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.325s,PASSED
+"verifyResponseStatusCode(post, 200)",,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.002s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.000s,PASSED
+result = slurper.parseText(post.getResponseBodyContent()),,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.001s,PASSED
+token = token,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.001s,PASSED
+assert token != null,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.000s,PASSED
+assert token instanceof java.lang.String,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.001s,PASSED
+println(post),,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.000s,PASSED
+,,,,,,,
+Test Cases/testGetBookingIds,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.447s,PASSED
+"get = sendRequest(findTestObject(""GetBookingIds"", [""bookingid"":2]))",,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.350s,PASSED
+"verifyResponseStatusCode(get, 200)",,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.003s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.001s,PASSED
+result = slurper.parseText(get.getResponseBodyContent()),,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.003s,PASSED
+bookingid = bookingid,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.002s,PASSED
+assert bookingid != null,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.001s,PASSED
+assert bookingid instanceof java.lang.Integer,,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.001s,PASSED
+println(get),,,,22-09-2024 18:00:57,22-09-2024 18:00:57,0.001s,PASSED
